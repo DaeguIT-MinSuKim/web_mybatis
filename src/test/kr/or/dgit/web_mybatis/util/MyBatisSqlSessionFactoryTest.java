@@ -1,4 +1,4 @@
-package kr.or.dgit.web_mybatis;
+package kr.or.dgit.web_mybatis.util;
 
 import java.sql.Connection;
 
@@ -9,8 +9,6 @@ import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-
-import kr.or.dgit.web_mybatis.util.MyBatisSqlSessionFactory;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MyBatisSqlSessionFactoryTest {
