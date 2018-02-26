@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'eclipse-wtp' 
+    id 'war' 
+}
+
+webAppDirName = 'WebContent'
+
+repositories {
+   jcenter()
+}
+		
+eclipse {
+	wtp {
+	    facet {
+	       facet name: 'jst.web', version: '3.1'
+	       facet name: 'jst.java', version: '1.8'
+	       facet name: 'wst.jsdt.web' , version: '1.0'   // Javascript 지정, 1.0
+	    }
+	}
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+    
+	compile group: 'org.apache.tomcat', name: 'tomcat-jsp-api', version: '8.5.27'
+	compile group: 'org.apache.tomcat', name: 'tomcat-el-api', version: '8.5.27'
+	compile group: 'org.apache.tomcat', name: 'tomcat-jasper-el', version: '8.5.27'
+	
+	compile group: 'org.mybatis', name: 'mybatis', version: '3.4.5'
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.45'
+    
+    testImplementation 'junit:junit:4.12'
+}
